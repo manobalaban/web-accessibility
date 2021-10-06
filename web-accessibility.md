@@ -1,5 +1,11 @@
 # Web Accessibility
 
+* Célj nem csak a különböző fogyatékossággal élő emberek segítése az internet vagy web applikációk használatban, henem irányelveket ad amelyek segítségével mindenki számára könnyebben használható alkalmazások tervezhetőek és készíthetőek.
+* Elsődlegesen tervezési folyamatoknál használatos szempontokról szól
+* Szükséges fejlesztői tudás a html és a javascript ismerete
+
+### Felosztása az előadásnak
+
 1. Áttekintése a WCAG-nak
 2. Legfontosabb szempontok akadálymentesítésnél
 3. Leggyakrabban használt fejlesztői megoldások, példák
