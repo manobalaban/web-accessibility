@@ -1,18 +1,20 @@
 # Web Accessibility
 
+1. Áttekintése a WCAG-nak
+2. Legfontosabb szempontok akadálymentesítésnél
+3. Leggyakrabban használt fejlesztői megoldások, példák
+
 ---
 
-# Bevezetés
+# I. [WCAG (Web Content Accessibility Guidelines)](https://www.w3.org/TR/WCAG21/)
 
----
-
-* [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/)
+* Akadálymentességi irányelvek a W3C (internetes szabványokért felelős konzorcium) gondozásában
 
 ### Négy alapelv:
-* perceivable (felfogható): az információknak és a felhasználói felület komponenseinek, a felhaszáló számára érzékelhető módon kell megjelenniük
+* perceivable (észlelhető): az információknak és a felhasználói felület komponenseinek, a felhaszáló számára érzékelhető módon kell megjelenniük
 * operable (működtethető): a felhasználói felület összetevőinek és a navigációnak működőképesnek kell lennie
 * understandable (érthető): az információknak és a felhasználói felület komponenseinek érthetőeknek kell lenniük
-* robust (robusztus): szabványos kód használata
+* robust (robusztus): szabványos kód használata, ez biztosítja a kompatibilitást más programokkal
 
 ### Irányelvek
 * Az iránymutatások megadják azokat az alapvető célokat, amelyekre törekedni kell annak érdekében, hogy a tartalmat hozzáférhetőbbé tegyék a különböző fogyatékossággal élő felhasználók számára.
@@ -23,7 +25,7 @@
 
 ---
 
-# Az akadálymentesítés legfontosabb szempontjai
+# II. Az akadálymentesítés legfontosabb szempontjai
 
 ### Billentyűzettel legyen hozzáférhető a navigáció, funkciók, tartalom
 
@@ -80,7 +82,7 @@ function focusHandling(event, element) {
     * föntről lefele
     * fejléc az első aztán navigáció (ha van), lapok köztni navigáció (ha van), végül a lábléc
 
-### Az űrlapelemek logikus laprendben legyenek rendezve és címkézve
+### Az űrlapelemek logikus rendben legyenek rendezve és címkézve
 
 ```html
 <form>
@@ -99,7 +101,7 @@ function focusHandling(event, element) {
 * Kerülendő: Click Here, More
 * Helyette: link to... 
 
-### Minden nem szöveges elemhez alternatív szövegek (alt attribútumok) álljanak rendelkezésre
+### Minden nem szöveges elemhez alternatív szöveg (alt attribútum) álljon rendelkezésre
 
 ```html
 Kép alternatív szöveggel:
@@ -110,15 +112,23 @@ Kép alternatív szöveggel:
 <br>
 
 ### Ha a színek mint információ hordozó vannak használva akkor ne csak ezek hordozzák az információt
-<br>
+
+```html
+<input id="colorExampleInput" type="text" onblur="onBlur()"><br>
+<label id="errorMessage" style="visibility: hidden; color: red">*Kötelező mező</label>
+
+<script>
+function onBlur() {
+	document.getElementById("colorExampleInput").style.border = "1px solid red";
+  document.getElementById("errorMessage").style.visibility = "visible";
+}
+</script>
+```
 
 ### Elég nagy a kontraszt ahhoz, hogy a látássérült felhasználóknak olvasható és felismerhető legyen
-<br>
+[contrast analyser](https://webaim.org/resources/contrastchecker/)
 
 ### A böngésző nagyítása és a betűméret megváltoztatása támogatott
-<br>
-
-### Reszponzív oldal
 <br>
 
 ### HTML-fejlécelemek (h1, h2, h3 stb.) használata a vizuális címsorok megjelenítésére. A HTML címsor elemeinek hierarchiája megfelel a tartalom megjelenésének
@@ -126,24 +136,26 @@ Kép alternatív szöveggel:
 
 ### A navigációs elemek, különösen a menük, mindig rendezett listaként vannak formázva
 <br>
----
-
-# ARIA (Accessible Rich Internet Applications)
 
 ---
 
-* [Accessible Rich Internet Applications (ARIA)](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
+# III. [ARIA (Accessible Rich Internet Applications)](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
 
-* Attribútumok halmaza, melyek meghatározzák a kisegítő programok számára webes tartalom természetét.
+* Attribútumok halmaza, melyek meghatározzák a kisegítő programok számára a webes tartalom és alkalmazások akadálymentesítését.
 
-
+---
 ### ARIA roles és ARIA attribútumok
+
+* alert
+* dinamikusan változó információ átadására, a felolvasó program azonnal elkezdi felolvasni amint megjelenik az elem
+```html
+<div role="alert" style="display: none;">az alert kiváltódik amint az elem láthatóvá válik</div>
+```
 
 * button
 * aria-pressed: toggle button
 ```html
 <div tabindex="0" role="button" aria-pressed="false">Save</div>
-<script>
 ```
 
 * checkbox
@@ -198,3 +210,6 @@ Kép alternatív szöveggel:
 ```html
 <img src="dog.png" arialabel="Rottweiler fut egy mezőn, háttérben hegyek" >
 ```
+---
+
+[JAWS felolvasó program](https://support.freedomscientific.com/Downloads/JAWS)
