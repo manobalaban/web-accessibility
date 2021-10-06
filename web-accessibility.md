@@ -27,7 +27,7 @@
 
 ### Billentyűzettel legyen hozzáférhető a navigáció, funkciók, tartalom
 
-* A kontent minden interaktív eleme billentyűzeten keresztül elérhető (Tab, Shift + Tab, nyilak)
+* A kontent minden eleme billentyűzeten keresztül elérhető (Tab, Shift + Tab, nyilak)
 * Ha elérhető egy elem, akkor az el is hagyható
 * Minden funkció kiválasztható (Enter, Space)
 * A fókusz látható
