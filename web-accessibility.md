@@ -132,6 +132,8 @@ function onBlur() {
 ```
 
 ### Elég nagy a kontraszt ahhoz, hogy a látássérült felhasználóknak olvasható és felismerhető legyen
+* High Contrast Mode (left Alt + left Shift + Print Screen)
+<br>
 [contrast analyser](https://webaim.org/resources/contrastchecker/)
 
 ### A böngésző nagyítása és a betűméret megváltoztatása támogatott
@@ -217,6 +219,20 @@ function onBlur() {
 <img src="dog.png" aria-label="Rottweiler fut egy mezőn, háttérben hegyek" >
 ```
 ---
+
+# IV. Összefoglaló (mit ellenőrizhet a fejlesztő)
+
+* Billenytű használat Tab/Shift+Tab (ne érj az egérhez)
+  * Minden funkció működtethető?
+  * A fókusz mindeig látható?
+
+* High Contrast Mode bekapcsolásakor minden látható-e?
+
+* Ellenőrizzük contrast analyser használatával a színeket.
+
+* Zoom után is láthatóak-e az elemek?
+
+* Képernyőolvasó a megfelelő információkat adja-e át?
 
 [JAWS felolvasó program](https://support.freedomscientific.com/Downloads/JAWS)
 <br>
