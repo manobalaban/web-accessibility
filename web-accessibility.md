@@ -219,3 +219,4 @@ function onBlur() {
 ---
 
 [JAWS felolvasó program](https://support.freedomscientific.com/Downloads/JAWS)
+[JAWS hotkeys](https://www.freedomscientific.com/training/jaws/hotkeys/)
