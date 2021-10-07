@@ -212,9 +212,9 @@ function onBlur() {
 </div>
 ```
 
-* arialabel
+* aria-label
 ```html
-<img src="dog.png" arialabel="Rottweiler fut egy mezőn, háttérben hegyek" >
+<img src="dog.png" aria-label="Rottweiler fut egy mezőn, háttérben hegyek" >
 ```
 ---
 
