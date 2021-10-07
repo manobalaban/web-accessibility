@@ -157,7 +157,15 @@ function onBlur() {
 * alert
 * dinamikusan változó információ átadására, a felolvasó program azonnal elkezdi felolvasni amint megjelenik az elem
 ```html
-<div role="alert" style="display: none;">az alert kiváltódik amint az elem láthatóvá válik</div>
+<input id="colorExampleInput" type="text" onblur="onBlur()"><br>
+<label id="errorMessage" style="visibility: hidden; color: red" role="alert">*Kötelező mező</label>
+
+<script>
+function onBlur() {
+	document.getElementById("colorExampleInput").style.border = "1px solid red";
+ 	document.getElementById("errorMessage").style.visibility = "visible";
+}
+</script>
 ```
 
 * button
