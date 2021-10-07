@@ -223,6 +223,11 @@ function onBlur() {
 </div>
 ```
 
+* progressbar
+```html
+<div role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50 %</div>
+```
+
 * aria-label
 ```html
 <img src="dog.png" aria-label="Rottweiler fut egy mezőn, háttérben hegyek" >
