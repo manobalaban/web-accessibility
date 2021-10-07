@@ -134,6 +134,7 @@ function onBlur() {
 ### Elég nagy a kontraszt ahhoz, hogy a látássérült felhasználóknak olvasható és felismerhető legyen
 * High Contrast Mode (left Alt + left Shift + Print Screen)
 <br>
+
 [contrast analyser](https://webaim.org/resources/contrastchecker/)
 
 ### A böngésző nagyítása és a betűméret megváltoztatása támogatott
