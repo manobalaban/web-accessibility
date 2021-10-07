@@ -126,7 +126,7 @@ Kép alternatív szöveggel:
 <script>
 function onBlur() {
 	document.getElementById("colorExampleInput").style.border = "1px solid red";
-  document.getElementById("errorMessage").style.visibility = "visible";
+ 	document.getElementById("errorMessage").style.visibility = "visible";
 }
 </script>
 ```
